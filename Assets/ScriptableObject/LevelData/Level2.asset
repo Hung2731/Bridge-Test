@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Level2
   m_EditorClassIdentifier: 
   levelID: 2
-  budget: 200
+  budget: 1000
   levelPrefab: {fileID: 7588651730638857648, guid: 8807371dcbbf2ff4d81d43c5e040a045, type: 3}

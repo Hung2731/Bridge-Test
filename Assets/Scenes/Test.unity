@@ -295,7 +295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8540284270324451307, guid: 4d09acfefa4b0e44388ef8e7322b9a76, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.49
+      value: -9.23
       objectReference: {fileID: 0}
     - target: {fileID: 8540284270324451307, guid: 4d09acfefa4b0e44388ef8e7322b9a76, type: 3}
       propertyPath: m_LocalPosition.y
@@ -303,7 +303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8540284270324451307, guid: 4d09acfefa4b0e44388ef8e7322b9a76, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.43
+      value: -0.32
       objectReference: {fileID: 0}
     - target: {fileID: 8540284270324451307, guid: 4d09acfefa4b0e44388ef8e7322b9a76, type: 3}
       propertyPath: m_LocalRotation.w
@@ -979,7 +979,7 @@ Transform:
   m_GameObject: {fileID: 392589184}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6700001, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2177,6 +2177,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6200973662441969162, guid: 163210dddc5038c469594285e970e3f0, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2893,7 +2897,7 @@ Transform:
   m_GameObject: {fileID: 1590209502}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6700001, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3022,6 +3026,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   woodBar: {fileID: 8803192577077830505, guid: 8172780cf85de994d8563d577b6a0be1, type: 3}
   steelBar: {fileID: 8803192577077830505, guid: 5a944ab8f4ee9e143b34a7e46014208d, type: 3}
+  BarCreationStarted: 0
   CurrentBar: {fileID: 0}
   BarToInstantiate: {fileID: 8803192577077830505, guid: 5a944ab8f4ee9e143b34a7e46014208d, type: 3}
   barParent: {fileID: 710243960}

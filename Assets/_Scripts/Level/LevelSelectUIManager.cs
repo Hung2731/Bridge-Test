@@ -50,6 +50,7 @@ public class LevelSelectUIManager : MonoBehaviour {
 
         // Giả sử scene của bạn là Level_1, Level_2, Level_3…
         string sceneName = "Test";
+        PlayerPrefs.SetInt(Const.CURRENT_LEVEL, currentLevelID);
         SceneManager.LoadScene(sceneName);
     }
 }

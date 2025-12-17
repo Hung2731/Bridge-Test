@@ -57,6 +57,7 @@ public class Bar : MonoBehaviour {
         startJoint.useLimits = false;
         startJoint.enableCollision = false;
         startJoint.enablePreprocessing = false;
+        startJoint.breakForce = 1000f;
 
         // --- HingeJoint cho đầu End ---
         endJoint = gameObject.AddComponent<HingeJoint>();
@@ -68,6 +69,7 @@ public class Bar : MonoBehaviour {
         endJoint.useLimits = false;
         endJoint.enableCollision = false;
         endJoint.enablePreprocessing = false;
+        endJoint.breakForce = 1000f;
     }
 
     public float GetLength() {

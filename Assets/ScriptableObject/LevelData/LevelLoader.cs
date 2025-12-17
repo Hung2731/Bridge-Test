@@ -8,7 +8,7 @@ public class LevelLoader : MonoBehaviour {
     private GameObject levelInstance;
 
     private void Awake() {
-        LoadLevel(levelID);
+        LoadLevel(PlayerPrefs.GetInt(Const.CURRENT_LEVEL));
     }
 
     public void LoadLevel(int id) {

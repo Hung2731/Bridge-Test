@@ -7,7 +7,7 @@ public class BarCreation : MonoBehaviour
     public GameObject woodBar;
     public GameObject steelBar;
 
-    bool BarCreationStarted = false;
+    public bool BarCreationStarted = false;
     public Bar CurrentBar;
     public GameObject BarToInstantiate;
     public Transform barParent;
@@ -81,11 +81,11 @@ public class BarCreation : MonoBehaviour
         // 3. Kiểm tra đủ tiền
         if (!budget.CanAfford(CurrentBar.cost)) {
             Debug.Log("❌ Not enough money. Cancel bar.");
-            return;
-            Destroy(CurrentBar.gameObject);
-            Destroy(CurrentEndPoint.gameObject);
-            BarCreationStarted = false;
-            return;
+            //return;
+            //Destroy(CurrentBar.gameObject);
+            //Destroy(CurrentEndPoint.gameObject);
+            //BarCreationStarted = false;
+            //return;
         }
 
         // 4. Trừ tiền
@@ -232,10 +232,9 @@ public class BarCreation : MonoBehaviour
         // Kiểm tra xem người dùng có nhấn vào một thanh không
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit)) {
-            Bar clickedBar = hit.collider.GetComponentInParent<Bar>();
-            Debug.Log("getting bar component");
-
+            Bar clickedBar = hit.collider.GetComponent<Bar>();
             if (clickedBar != null) {
+            Debug.Log("getting bar component");
                 Debug.Log("clicked bar is not null");   
                 // Nếu thanh được nhấn là thanh đã được chọn, xóa nó
                 if (selectedBar == clickedBar) {
@@ -390,6 +389,8 @@ public class BarCreation : MonoBehaviour
         hj.axis = Vector3.forward;
 
         hj.useLimits = false;
+        hj.enablePreprocessing = false;
+        hj.breakForce = 1000f;
     }
 
 }

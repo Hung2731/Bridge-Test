@@ -11,6 +11,8 @@ public class LevelSelector : MonoBehaviour {
 
     private void OnMouseDown() {
         // Khi click vào object có Collider
+        if (levelID > PlayerPrefs.GetInt(Const.PLAYER_MAX_PASSED_LEVEL)+1)
+            return;
         if (uiManager != null) {
             uiManager.ShowLevelInfo(levelID, levelName, previewImage);
         }

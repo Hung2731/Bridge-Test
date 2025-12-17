@@ -6,6 +6,7 @@ public class WinCheckPoint : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Car")) {
+            WinLevel();
             Debug.Log("Win Checkpoint Triggered by Car");
             Rigidbody rb = other.GetComponent<Rigidbody>();
             if (rb != null) {
@@ -30,4 +31,13 @@ public class WinCheckPoint : MonoBehaviour {
         if (winUI != null)
             winUI.SetActive(true);
     }
+
+    private void WinLevel() {
+        int currentLevel = PlayerPrefs.GetInt(Const.CURRENT_LEVEL);
+        if (currentLevel > PlayerPrefs.GetInt(Const.PLAYER_MAX_PASSED_LEVEL))
+        {
+            PlayerPrefs.SetInt(Const.PLAYER_MAX_PASSED_LEVEL, currentLevel);
+        }
+    }
+
 }

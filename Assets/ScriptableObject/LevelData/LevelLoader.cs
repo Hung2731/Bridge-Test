@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour {
     public LevelDatabase database;   // Danh sách LevelData
     public int levelID = 1;          // Level mặc định
     public Transform levelRoot;      // ⭐ Parent chứa level khi load
+    public GameObject winPanel;
 
     private GameObject levelInstance;
 
@@ -50,5 +52,24 @@ public class LevelLoader : MonoBehaviour {
         else {
             Debug.LogWarning($" LevelData {id} KHÔNG CÓ prefab.");
         }
+    }
+    public void LoadNextLevel() {
+        winPanel.SetActive(false);
+
+        int nextLevelID = levelID + 1;
+
+        LevelData nextLevel = database.GetLevelByID(nextLevelID);
+        if (nextLevel == null) {
+            Debug.Log("🎉 Đã hoàn thành tất cả level!");
+            return;
+        }
+        PlayerPrefs.SetInt(Const.CURRENT_LEVEL, nextLevelID);
+
+        SceneManager.LoadScene(Const.SCENE_GAMEPLAY);
+        LoadLevel(nextLevelID);
+    }
+
+    public void LoadSceneLevel() {
+        SceneManager.LoadScene(Const.SCENE_LEVEL);
     }
 }

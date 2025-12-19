@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Wood
   m_EditorClassIdentifier: 
   materialType: 0
-  costPerUnit: 20
+  costPerUnit: 8
   maxLength: 5

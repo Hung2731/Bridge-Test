@@ -296,7 +296,7 @@ public class BarCreation : MonoBehaviour
 
         // Clone các Bar + tạo mặt cầu giữa 2 thanh song song
         foreach (var bar in GameManager_Test.AllBars) {
-            if (bar.startPoint == null || bar.endPoint == null) continue; 
+            if (bar.startPoint == null || bar.endPoint == null) continue;
 
             Point startClone = bar.startPoint.clonePoint;
             Point endClone = bar.endPoint.clonePoint;
@@ -363,7 +363,9 @@ public class BarCreation : MonoBehaviour
                 AddRoadHinge(roadSurface, endClone, barRbB);
             }
 
-
+            //if (bar.barMaterialType == BarMaterialType.Road) {
+            //    bar.gameObject.SetActive(false);
+            //}
             Debug.Log($"✅ Created surface between {bar.name} and its clone");
         }
 
@@ -390,7 +392,7 @@ public class BarCreation : MonoBehaviour
 
         hj.useLimits = false;
         hj.enablePreprocessing = false;
-        hj.breakForce = 1000f;
+        hj.breakForce = 700f;
     }
 
 }

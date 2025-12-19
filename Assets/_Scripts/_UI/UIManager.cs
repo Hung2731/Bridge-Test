@@ -26,7 +26,7 @@ public class UIManager : MonoBehaviour {
     }
 
     public void Restart() {
-        SceneManager.LoadScene("Test");
+        SceneManager.LoadScene(Const.SCENE_GAMEPLAY);
     }
 
     public void SelectMaterial(BarMaterialType type) {

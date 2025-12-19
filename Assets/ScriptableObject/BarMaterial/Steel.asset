@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7134dd27f2e02b54c86c0fb1ed5af107, type: 3}
   m_Name: Steel
   m_EditorClassIdentifier: 
-  materialType: 0
-  costPerUnit: 8
+  materialType: 1
+  costPerUnit: 20
   maxLength: 5

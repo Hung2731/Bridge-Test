@@ -277,21 +277,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 70830930647553604, guid: 4d09acfefa4b0e44388ef8e7322b9a76, type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8321067519362931901, guid: 4d09acfefa4b0e44388ef8e7322b9a76, type: 3}
       propertyPath: m_Name
       value: Cliff 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8321067519362931901, guid: 4d09acfefa4b0e44388ef8e7322b9a76, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8321067519362931901, guid: 4d09acfefa4b0e44388ef8e7322b9a76, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8540284270324451307, guid: 4d09acfefa4b0e44388ef8e7322b9a76, type: 3}
       propertyPath: m_LocalPosition.x
@@ -970,6 +958,7 @@ MonoBehaviour:
   database: {fileID: 11400000, guid: 2ea391b0b7aad1c41bc0c23bf7eebae2, type: 2}
   levelID: 1
   levelRoot: {fileID: 1590209503}
+  winPanel: {fileID: 1300301044}
 --- !u!4 &392589186
 Transform:
   m_ObjectHideFlags: 0
@@ -1461,7 +1450,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 623195008}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 392589185}
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+        m_MethodName: LoadSceneLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &623195008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2121,25 +2122,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Car 1 '
       objectReference: {fileID: 0}
-    - target: {fileID: 1768751983434851471, guid: 163210dddc5038c469594285e970e3f0, type: 3}
-      propertyPath: m_Size.x
-      value: 4.375492
-      objectReference: {fileID: 0}
-    - target: {fileID: 1768751983434851471, guid: 163210dddc5038c469594285e970e3f0, type: 3}
-      propertyPath: m_Size.y
-      value: 1.7158132
-      objectReference: {fileID: 0}
-    - target: {fileID: 1768751983434851471, guid: 163210dddc5038c469594285e970e3f0, type: 3}
-      propertyPath: m_Center.x
-      value: -0.06990433
-      objectReference: {fileID: 0}
-    - target: {fileID: 1768751983434851471, guid: 163210dddc5038c469594285e970e3f0, type: 3}
-      propertyPath: m_Center.y
-      value: 0.8794992
-      objectReference: {fileID: 0}
     - target: {fileID: 3301772411682046595, guid: 163210dddc5038c469594285e970e3f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.499968
+      value: -10.493
       objectReference: {fileID: 0}
     - target: {fileID: 3301772411682046595, guid: 163210dddc5038c469594285e970e3f0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2147,7 +2132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3301772411682046595, guid: 163210dddc5038c469594285e970e3f0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.89926
+      value: -1.875
       objectReference: {fileID: 0}
     - target: {fileID: 3301772411682046595, guid: 163210dddc5038c469594285e970e3f0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2176,10 +2161,6 @@ PrefabInstance:
     - target: {fileID: 3301772411682046595, guid: 163210dddc5038c469594285e970e3f0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200973662441969162, guid: 163210dddc5038c469594285e970e3f0, type: 3}
-      propertyPath: m_Mass
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2342,21 +2323,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 70830930647553604, guid: 4d09acfefa4b0e44388ef8e7322b9a76, type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8321067519362931901, guid: 4d09acfefa4b0e44388ef8e7322b9a76, type: 3}
       propertyPath: m_Name
       value: Cliff 4 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8321067519362931901, guid: 4d09acfefa4b0e44388ef8e7322b9a76, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8321067519362931901, guid: 4d09acfefa4b0e44388ef8e7322b9a76, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8540284270324451307, guid: 4d09acfefa4b0e44388ef8e7322b9a76, type: 3}
       propertyPath: m_LocalPosition.x

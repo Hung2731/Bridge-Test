@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
 public class WinCheckPoint : MonoBehaviour {
-    [SerializeField] private GameObject winUI;   
     public float stopSpeedTime = 0.3f;           
 
     private void OnTriggerEnter(Collider other) {
@@ -28,8 +27,7 @@ public class WinCheckPoint : MonoBehaviour {
         rb.linearVelocity = Vector3.zero;
         rb.constraints = RigidbodyConstraints.FreezeAll;
 
-        if (winUI != null)
-            winUI.SetActive(true);
+        UIManager.Instance.ShowWinUI();
     }
 
     private void WinLevel() {

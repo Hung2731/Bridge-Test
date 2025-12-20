@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class BarCreation : MonoBehaviour 
+public class BarCreation : MonoBehaviour
 {
     public GameObject woodBar;
     public GameObject steelBar;
@@ -25,22 +25,23 @@ public class BarCreation : MonoBehaviour
     public LevelBudgetManager budget;
     public BarMaterialType currentMaterialType = BarMaterialType.Road;
 
-    void StartBarCreation(Vector3 startPosition) 
+    void StartBarCreation(Vector3 startPosition)
     {
         startPosition.z = FixedZ;
         Debug.Log("Starting bar creation");
-        if (CurrentStartPoint != null) 
-        {   
-            if ( false
+        if (CurrentStartPoint != null)
+        {
+            if (false
             //GameManager_Test.AllBars.Exists(bar => bar.startPoint.PointId == CurrentStartPoint.PointId && bar.endPoint.PointId == CurrentEndPoint.PointId)
             //||
             //GameManager_Test.AllBars.Exists(bar => bar.startPoint.PointId == CurrentEndPoint.PointId && bar.endPoint.PointId == CurrentStartPoint.PointId)
             //
-            ) 
+            )
             {
                 //Debug.Log("Bar already exists with the same startPoint and endPoint.");
             }
-            else {
+            else
+            {
                 CurrentBar = Instantiate(BarToInstantiate, barParent).GetComponent<Bar>();
                 CurrentBar.StartPosition = startPosition;
                 CurrentBar.startPoint = CurrentStartPoint;
@@ -54,22 +55,22 @@ public class BarCreation : MonoBehaviour
         Debug.Log("CurrentEndPoint " + CurrentEndPoint.PointId);
     }
 
-    void FinishBarCreation() 
+    void FinishBarCreation()
     {
         Vector3Int endGrid = Vector3Int.RoundToInt(CurrentEndPoint.transform.position);
 
-        if (GameManager_Test.AllPoints.ContainsKey(endGrid)) 
+        if (GameManager_Test.AllPoints.ContainsKey(endGrid))
         {
             Debug.Log("Point exists at " + endGrid);
             Destroy(CurrentEndPoint.gameObject);
             CurrentEndPoint = GameManager_Test.AllPoints[endGrid];
         }
-        else 
+        else
         {
             Debug.Log("Creating new point at " + endGrid);
             GameManager_Test.AllPoints.Add(endGrid, CurrentEndPoint);
 
-        }  
+        }
         CurrentBar.endPoint = CurrentEndPoint;
         // 1. Gán lại vật liệu theo loại đang chọn
         MaterialDefinition def = materialDB.Get(currentMaterialType);
@@ -79,7 +80,8 @@ public class BarCreation : MonoBehaviour
         CurrentBar.CalculateCost();
 
         // 3. Kiểm tra đủ tiền
-        if (!budget.CanAfford(CurrentBar.cost)) {
+        if (!budget.CanAfford(CurrentBar.cost))
+        {
             Debug.Log("❌ Not enough money. Cancel bar.");
             //return;
             //Destroy(CurrentBar.gameObject);
@@ -92,7 +94,7 @@ public class BarCreation : MonoBehaviour
         budget.Spend(CurrentBar.cost);
         Debug.Log($"Spent {CurrentBar.cost}, total spent = {budget.spent}");
 
-        GameManager_Test.AllBars.Add(CurrentBar); 
+        GameManager_Test.AllBars.Add(CurrentBar);
 
         CurrentStartPoint.ConnectedBars.Add(CurrentBar);
         CurrentEndPoint.ConnectedBars.Add(CurrentBar);
@@ -103,44 +105,51 @@ public class BarCreation : MonoBehaviour
         CurrentBar.SetupJoints(CurrentStartPoint, CurrentEndPoint);
 
         CurrentStartPoint = CurrentEndPoint;
-        StartBarCreation(CurrentStartPoint.transform.position);  
+        StartBarCreation(CurrentStartPoint.transform.position);
     }
 
-    void DeleteCurrentBar() {
-        if (CurrentBar != null && CurrentBar.materialDefinition != null) {
+    void DeleteCurrentBar()
+    {
+        if (CurrentBar != null && CurrentBar.materialDefinition != null)
+        {
             budget.Refund(CurrentBar.cost);
             Debug.Log($"Refund {CurrentBar.cost}");
         }
 
+        AudioManager.instance.PlaySFX(SoundEffect.ButtonClick);
         GameManager_Test.AllBars.Remove(CurrentBar);
         Destroy(CurrentBar.gameObject);
-        
-        if (CurrentStartPoint.ConnectedBars.Count == 0 && CurrentStartPoint.Runtime) 
+
+        if (CurrentStartPoint.ConnectedBars.Count == 0 && CurrentStartPoint.Runtime)
         {
             GameManager_Test.AllPoints.Remove(CurrentStartPoint.PointId);
             Destroy(CurrentStartPoint.gameObject);
         }
-        if (CurrentEndPoint.ConnectedBars.Count == 0 && CurrentEndPoint.Runtime) 
+        if (CurrentEndPoint.ConnectedBars.Count == 0 && CurrentEndPoint.Runtime)
         {
             GameManager_Test.AllPoints.Remove(CurrentEndPoint.PointId);
             Destroy(CurrentEndPoint.gameObject);
         }
     }
 
-    private void Update() {
+    private void Update()
+    {
         // Bắt đầu vẽ khi nhấn chuột trái
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit hit)) {
+            if (Physics.Raycast(ray, out RaycastHit hit))
+            {
                 Point clickedPoint = hit.collider.GetComponent<Point>();
 
-                if (!BarCreationStarted) {
+                if (!BarCreationStarted)
+                {
                     BarCreationStarted = true;
 
                     Vector3 startPos;
 
-                    if (clickedPoint != null) {
+                    if (clickedPoint != null)
+                    {
                         // Nếu click trúng 1 point đã tồn tại
                         Debug.Log("Start from existing point: " + clickedPoint.name);
                         startPos = clickedPoint.transform.position;
@@ -150,17 +159,20 @@ public class BarCreation : MonoBehaviour
                         if (!GameManager_Test.AllPoints.ContainsKey(id))
                             GameManager_Test.AllPoints.Add(id, clickedPoint);
                     }
-                    else {
+                    else
+                    {
                         // Không trúng point nào → tạo mới
                         Vector3 mousePos = GetMouseWorldPosition();
                         startPos = RoundToGrid(mousePos);
                         Vector3Int id = Vector3Int.RoundToInt(startPos);
 
-                        if (GameManager_Test.AllPoints.ContainsKey(id)) {
+                        if (GameManager_Test.AllPoints.ContainsKey(id))
+                        {
                             CurrentStartPoint = GameManager_Test.AllPoints[id];
                             Debug.Log("Start from existing grid point: " + CurrentStartPoint.PointId);
                         }
-                        else {
+                        else
+                        {
                             GameObject pointObj = Instantiate(PointToInstantiate, startPos, Quaternion.identity, PointParent);
                             CurrentStartPoint = pointObj.GetComponent<Point>();
                             GameManager_Test.AllPoints.Add(id, CurrentStartPoint);
@@ -171,26 +183,27 @@ public class BarCreation : MonoBehaviour
                     // Bắt đầu tạo thanh
                     StartBarCreation(CurrentStartPoint.transform.position);
                 }
-                else {
+                else
+                {
                     FinishBarCreation();
                 }
             }
         }
 
         // Hủy khi nhấn chuột phải
-        if (Input.GetMouseButtonDown(1) && BarCreationStarted) 
+        if (Input.GetMouseButtonDown(1) && BarCreationStarted)
         {
             BarCreationStarted = false;
             DeleteCurrentBar();
         }
 
-        if (Input.GetMouseButtonDown(1) && !BarCreationStarted) 
+        if (Input.GetMouseButtonDown(1) && !BarCreationStarted)
         {
             DeleteSelectingBar();
         }
 
         // Cập nhật vị trí thanh đang vẽ
-        if (BarCreationStarted && CurrentBar != null && CurrentEndPoint != null) 
+        if (BarCreationStarted && CurrentBar != null && CurrentEndPoint != null)
         {
             Vector3 mousePos = GetMouseWorldPosition();
             mousePos.z = FixedZ;
@@ -205,7 +218,7 @@ public class BarCreation : MonoBehaviour
         }
     }
 
-    Vector3 RoundToGrid(Vector3 position) 
+    Vector3 RoundToGrid(Vector3 position)
     {
         return new Vector3(
             Mathf.Round(position.x),
@@ -214,12 +227,12 @@ public class BarCreation : MonoBehaviour
         );
     }
 
-    Vector3 GetMouseWorldPosition() 
+    Vector3 GetMouseWorldPosition()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Plane xyPlane = new Plane(Vector3.forward, Vector3.zero); // mặt phẳng Z=0
         float distance;
-        if (xyPlane.Raycast(ray, out distance)) 
+        if (xyPlane.Raycast(ray, out distance))
         {
             return ray.GetPoint(distance);
         }
@@ -227,18 +240,23 @@ public class BarCreation : MonoBehaviour
     }
 
 
-    void DeleteSelectingBar() {
+    void DeleteSelectingBar()
+    {
         Debug.Log("deleting selecting bar");
         // Kiểm tra xem người dùng có nhấn vào một thanh không
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit hit)) {
+        if (Physics.Raycast(ray, out RaycastHit hit))
+        {
             Bar clickedBar = hit.collider.GetComponent<Bar>();
-            if (clickedBar != null) {
-            Debug.Log("getting bar component");
-                Debug.Log("clicked bar is not null");   
+            if (clickedBar != null)
+            {
+                Debug.Log("getting bar component");
+                Debug.Log("clicked bar is not null");
                 // Nếu thanh được nhấn là thanh đã được chọn, xóa nó
-                if (selectedBar == clickedBar) {
-                    if (clickedBar != null) {
+                if (selectedBar == clickedBar)
+                {
+                    if (clickedBar != null)
+                    {
                         budget.Refund(clickedBar.cost);
 
                         Debug.Log("destroy clicked bar");
@@ -247,7 +265,8 @@ public class BarCreation : MonoBehaviour
                     }
                     selectedBar = null; // Hủy trạng thái chọn sau khi xóa
                 }
-                else {
+                else
+                {
                     // Chọn thanh mới
                     selectedBar = clickedBar;
                     Debug.Log("Selected bar: " + clickedBar.name);
@@ -259,23 +278,28 @@ public class BarCreation : MonoBehaviour
         selectedBar = null;
     }
 
-    public void CreateBridgeSideAndRoad() {
+    public void CreateBridgeSideAndRoad()
+    {
         Debug.Log("=== Creating bridge sides & road surfaces (no Road filter) ===");
 
         // Clone toàn bộ Point
-        foreach (var point in GameManager_Test.AllPoints.Values) {
+        foreach (var point in GameManager_Test.AllPoints.Values)
+        {
             Vector3 clonePos = point.transform.position + Vector3.forward * -4f;
             GameObject cloneObj = Instantiate(PointToInstantiate, clonePos, Quaternion.identity, PointParent);
             Point clonePoint = cloneObj.GetComponent<Point>();
             point.clonePoint = clonePoint;
 
             Rigidbody rb = cloneObj.GetComponent<Rigidbody>();
-            if (rb != null) {
-                if (point is StaticPoint) {
+            if (rb != null)
+            {
+                if (point is StaticPoint)
+                {
                     rb.isKinematic = true;
                     rb.useGravity = false;
                 }
-                else {
+                else
+                {
                     rb.isKinematic = false;
                     rb.useGravity = true;
                 }
@@ -283,11 +307,13 @@ public class BarCreation : MonoBehaviour
         }
 
         // Clone kết nối giữa các Point
-        foreach (var point in GameManager_Test.AllPoints.Values) {
+        foreach (var point in GameManager_Test.AllPoints.Values)
+        {
             Point clonePoint = point.clonePoint;
             if (clonePoint == null) continue;
 
-            foreach (var connectedPoint in point.ConnectedPoints) {
+            foreach (var connectedPoint in point.ConnectedPoints)
+            {
                 var connectedClone = connectedPoint.clonePoint;
                 if (connectedClone != null && !clonePoint.ConnectedPoints.Contains(connectedClone))
                     clonePoint.ConnectedPoints.Add(connectedClone);
@@ -295,7 +321,8 @@ public class BarCreation : MonoBehaviour
         }
 
         // Clone các Bar + tạo mặt cầu giữa 2 thanh song song
-        foreach (var bar in GameManager_Test.AllBars) {
+        foreach (var bar in GameManager_Test.AllBars)
+        {
             if (bar.startPoint == null || bar.endPoint == null) continue;
 
             Point startClone = bar.startPoint.clonePoint;
@@ -353,12 +380,14 @@ public class BarCreation : MonoBehaviour
             Rigidbody barRbA = bar.GetComponent<Rigidbody>();
             Rigidbody barRbB = newBarObj.GetComponent<Rigidbody>();
 
-            if (barRbA != null) {
+            if (barRbA != null)
+            {
                 AddRoadHinge(roadSurface, bar.startPoint, barRbA);
                 AddRoadHinge(roadSurface, bar.endPoint, barRbA);
             }
 
-            if (barRbB != null) {
+            if (barRbB != null)
+            {
                 AddRoadHinge(roadSurface, startClone, barRbB);
                 AddRoadHinge(roadSurface, endClone, barRbB);
             }
@@ -372,7 +401,8 @@ public class BarCreation : MonoBehaviour
         Debug.Log("✅ Bridge sides + surfaces created successfully!");
     }
 
-    void AddRoadHinge(GameObject road, Point point, Rigidbody barRb) {
+    void AddRoadHinge(GameObject road, Point point, Rigidbody barRb)
+    {
         HingeJoint hj = road.AddComponent<HingeJoint>();
         hj.connectedBody = barRb;
 

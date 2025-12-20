@@ -4,12 +4,24 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
+    public static UIManager Instance;
+
     [Header("Material Options")]
     public List<BarMaterialOption> materials = new List<BarMaterialOption>();
 
     [Header("References")]
     public BarCreation barCreation;
     public CameraViewController cameraViewController;
+
+    [SerializeField] private GameObject winUI;
+
+    private void Awake() {
+        if (Instance == null) {
+            Instance = this;
+        } else {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start() {
         // Chọn mặc định
@@ -55,5 +67,10 @@ public class UIManager : MonoBehaviour {
 
     public void SelectSteel() {
         SelectMaterial(BarMaterialType.Steel);
+    }
+
+    public void ShowWinUI() {
+        if (winUI != null)
+            winUI.SetActive(true);
     }
 }

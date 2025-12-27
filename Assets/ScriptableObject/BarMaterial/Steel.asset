@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Steel
   m_EditorClassIdentifier: 
   materialType: 1
-  costPerUnit: 20
-  maxLength: 5
+  costPerUnit: 30
+  maxLength: 6

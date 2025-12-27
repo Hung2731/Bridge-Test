@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7134dd27f2e02b54c86c0fb1ed5af107, type: 3}
-  m_Name: Road
+  m_Script: {fileID: 11500000, guid: a5cfbf16e178df44f9b47463e49fbea2, type: 3}
+  m_Name: Level3
   m_EditorClassIdentifier: 
-  materialType: 2
-  costPerUnit: 25
-  maxLength: 4
+  levelID: 3
+  budget: 1700
+  levelPrefab: {fileID: 7588651730638857648, guid: 0b9a56a074a12134aaa3883ca31e5c13, type: 3}

@@ -422,7 +422,7 @@ public class BarCreation : MonoBehaviour
 
         hj.useLimits = false;
         hj.enablePreprocessing = false;
-        hj.breakForce = 700f;
+        hj.breakForce = 1200f;
     }
 
 }

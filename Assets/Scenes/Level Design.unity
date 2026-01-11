@@ -2245,10 +2245,17 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 2079132790}
+    - target: {fileID: 4928247220421048151, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7919067377998527004, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
 --- !u!1001 &172146168
 PrefabInstance:
@@ -3955,10 +3962,17 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 2079132790}
+    - target: {fileID: 4928247220421048151, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7919067377998527004, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
 --- !u!1001 &315582492
 PrefabInstance:
@@ -4284,10 +4298,17 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 2079132790}
+    - target: {fileID: 4928247220421048151, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7919067377998527004, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
 --- !u!1001 &326892013
 PrefabInstance:
@@ -4415,10 +4436,17 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 2079132790}
+    - target: {fileID: 4928247220421048151, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7919067377998527004, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
 --- !u!1001 &341507987
 PrefabInstance:
@@ -4680,10 +4708,17 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 2079132790}
+    - target: {fileID: 4928247220421048151, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7919067377998527004, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
 --- !u!1001 &394436741
 PrefabInstance:
@@ -7028,10 +7063,17 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 2079132790}
+    - target: {fileID: 4928247220421048151, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7919067377998527004, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
 --- !u!1001 &585186804
 PrefabInstance:
@@ -7412,10 +7454,17 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 2079132790}
+    - target: {fileID: 4928247220421048151, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7919067377998527004, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
 --- !u!4 &637337548 stripped
 Transform:
@@ -8558,10 +8607,17 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 2079132790}
+    - target: {fileID: 4928247220421048151, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7919067377998527004, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
 --- !u!1001 &779480006
 PrefabInstance:
@@ -9383,10 +9439,17 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 2079132790}
+    - target: {fileID: 4928247220421048151, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7919067377998527004, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
 --- !u!1001 &850700960
 PrefabInstance:
@@ -11043,10 +11106,17 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 2079132790}
+    - target: {fileID: 4928247220421048151, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7919067377998527004, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
 --- !u!1001 &988708684
 PrefabInstance:
@@ -12264,10 +12334,17 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 2079132790}
+    - target: {fileID: 4928247220421048151, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7919067377998527004, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
 --- !u!1001 &1038484817
 PrefabInstance:
@@ -13462,10 +13539,17 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 2079132790}
+    - target: {fileID: 4928247220421048151, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7919067377998527004, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
 --- !u!1001 &1184283032
 PrefabInstance:
@@ -16564,10 +16648,17 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 2079132790}
+    - target: {fileID: 4928247220421048151, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7919067377998527004, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
 --- !u!1001 &1468667971
 PrefabInstance:
@@ -16757,10 +16848,17 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 2079132790}
+    - target: {fileID: 4928247220421048151, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7919067377998527004, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
 --- !u!1001 &1474080233
 PrefabInstance:
@@ -20076,10 +20174,17 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 2079132790}
+    - target: {fileID: 4928247220421048151, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7919067377998527004, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
 --- !u!1001 &1698202307
 PrefabInstance:
@@ -22470,10 +22575,17 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 2079132790}
+    - target: {fileID: 4928247220421048151, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7919067377998527004, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
 --- !u!1001 &1913995110
 PrefabInstance:
@@ -24006,10 +24118,17 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 2079132790}
+    - target: {fileID: 4928247220421048151, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7919067377998527004, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
 --- !u!1001 &2050813301
 PrefabInstance:
@@ -24075,10 +24194,17 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 2079132790}
+    - target: {fileID: 4928247220421048151, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7919067377998527004, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
 --- !u!1001 &2054576770
 PrefabInstance:
@@ -25130,10 +25256,17 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 2079132790}
+    - target: {fileID: 4928247220421048151, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7919067377998527004, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
 --- !u!1001 &2135103643
 PrefabInstance:
@@ -25320,10 +25453,21 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 2079132790}
+    - target: {fileID: 4928247220421048151, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206168480342083635, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      propertyPath: m_LocalScale.z
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7919067377998527004, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d3379481dfb01bb48abcbf482862a874, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

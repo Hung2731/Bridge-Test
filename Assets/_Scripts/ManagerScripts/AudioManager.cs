@@ -22,11 +22,12 @@ public class AudioManager : Singleton<AudioManager>
 
 public enum BackgroundMusic
 {
-    MainTheme,
-    GamePlay,
+    MainTheme = 0,
+    GamePlay = 1,
 }
 
 public enum SoundEffect
 {
-    ButtonClick,
+    ButtonClick = 0,
+    BuildClick = 1,
 }

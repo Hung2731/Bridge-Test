@@ -2,13 +2,14 @@
 
 public class CarMovement : MonoBehaviour
 {
-    public float speed = 4f;
+    public float speed = 2.5f;
 
     private Rigidbody rb;
     private float fixedZ;
 
     void Start() {
         rb = GetComponent<Rigidbody>();
+        fixedZ = rb.position.z;
     }
 
     void FixedUpdate() {

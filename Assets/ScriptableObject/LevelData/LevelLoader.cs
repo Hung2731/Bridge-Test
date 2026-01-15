@@ -6,6 +6,7 @@ public class LevelLoader : MonoBehaviour {
     public int levelID = 1;          // Level mặc định
     public Transform levelRoot;      // ⭐ Parent chứa level khi load
     public GameObject winPanel;
+    public GameObject buildingPlane;
 
     private GameObject levelInstance;
 
@@ -51,6 +52,10 @@ public class LevelLoader : MonoBehaviour {
         }
         else {
             Debug.LogWarning($" LevelData {id} KHÔNG CÓ prefab.");
+        }
+        // Cài đặt kích thước mặt phẳng xây dựng
+        if (buildingPlane != null) {
+            buildingPlane.transform.localScale = data.buildPlaneScale;
         }
     }
     public void LoadNextLevel() {

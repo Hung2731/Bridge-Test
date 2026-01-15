@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class UIManager : MonoBehaviour {
     public static UIManager Instance;
@@ -70,7 +71,8 @@ public class UIManager : MonoBehaviour {
     }
 
     public void ShowWinUI() {
-        if (winUI != null)
-            winUI.SetActive(true);
+        winUI.GetComponent<CanvasGroup>().alpha = 0f;
+        winUI.SetActive(true);
+        winUI.GetComponent<CanvasGroup>().DOFade(1f, 0.25f);
     }
 }

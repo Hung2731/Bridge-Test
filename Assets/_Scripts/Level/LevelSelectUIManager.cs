@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class LevelSelectUIManager : MonoBehaviour {
     [Header("UI Elements")]
@@ -28,7 +29,9 @@ public class LevelSelectUIManager : MonoBehaviour {
             previewImageUI.enabled = false;
         }
 
+        panelRoot.GetComponent<CanvasGroup>().alpha = 0f;
         panelRoot.SetActive(true);
+        panelRoot.GetComponent<CanvasGroup>().DOFade(1f, 0.3f);
     }
 
     public void ClosePanel() {

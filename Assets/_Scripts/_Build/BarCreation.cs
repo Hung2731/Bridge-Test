@@ -57,6 +57,7 @@ public class BarCreation : MonoBehaviour
 
     void FinishBarCreation()
     {
+        AudioManager.instance.PlaySFX(SoundEffect.BuildClick);
         Vector3Int endGrid = Vector3Int.RoundToInt(CurrentEndPoint.transform.position);
 
         if (GameManager_Test.AllPoints.ContainsKey(endGrid))

@@ -1,9 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
-
 public class LevelSelector : MonoBehaviour
 {
-
     public TMP_Text levelText;
     [Header("Level Info")]
     public int levelID;
@@ -15,12 +13,18 @@ public class LevelSelector : MonoBehaviour
 
     private void Start()
     {
-        if (levelText != null)
-        {
+        SetUpLevelText();
+    }
+
+    private void SetUpLevelText() 
+    {
+        if (levelText != null) {
             levelText.text = levelID.ToString();
+            if (levelID > PlayerPrefs.GetInt(Const.PLAYER_MAX_PASSED_LEVEL) + 1) {
+                levelText.color = Color.gray; // Màu xám cho level khóa
+            }
         }
-        else
-        {
+        else {
             Debug.LogWarning("LevelSelector: levelText chưa được gán!");
         }
     }

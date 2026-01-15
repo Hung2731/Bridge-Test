@@ -9,7 +9,7 @@ public class LevelBudgetManager : MonoBehaviour {
     public UnityEngine.Events.UnityEvent<float, float> OnBudgetChanged;
 
     private void Start() {
-        levelBudget = levelData.budget;   // Lấy ngân sách từ LevelData
+        levelBudget = levelData.budget;
         OnBudgetChanged?.Invoke(spent, levelBudget);
     }
 

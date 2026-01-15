@@ -180,6 +180,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 82b65f26e4a3d154e80b24be8f87c890, type: 3}
   m_SfxClips:
   - {fileID: 8300000, guid: 34d3d6f2a1c68c341bc93339c5eba40c, type: 3}
+  - {fileID: 8300000, guid: bab4a03f448911b468aa5353c1542c52, type: 3}
   m_BgmSource: {fileID: 5892861297827920080}
   m_SfxSource: {fileID: 6259677032307082581}
 --- !u!1 &3506720159707110283

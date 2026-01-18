@@ -24,10 +24,7 @@ public class Bar : MonoBehaviour {
 
         // Xoay thanh theo hướng của direction, trục vuông góc là Vector3.forward
         transform.rotation = Quaternion.FromToRotation(Vector3.right, direction.normalized);
-
         transform.localScale = new Vector3(length, 0.1f, 0.1f);
-
-        // barBoxCollider.size = barMeshRenderer.bounds.size;
     }
 
     public void SetupJoints(Point start, Point end) {

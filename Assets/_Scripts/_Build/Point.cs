@@ -12,8 +12,6 @@ public class Point : MonoBehaviour {
 
     protected virtual void Start() {
         PointId = Vector3Int.RoundToInt(transform.position);
-        //pointRigidbody = GetComponent<Rigidbody>();
-        //pointRigidbody.isKinematic = true;
     }
 
     private void Update() {

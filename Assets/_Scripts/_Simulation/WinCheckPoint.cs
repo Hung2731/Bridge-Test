@@ -5,8 +5,8 @@ public class WinCheckPoint : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Car")) {
+            AudioManager.instance.PlaySFX(SoundEffect.Victory);
             WinLevel();
-            Debug.Log("Win Checkpoint Triggered by Car");
             Rigidbody rb = other.GetComponent<Rigidbody>();
             if (rb != null) {
                 StartCoroutine(SlowDownAndWin(rb));

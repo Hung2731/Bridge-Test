@@ -40,8 +40,6 @@ public class LevelSelectUIManager : MonoBehaviour {
 
     // Nút Play sẽ load Scene "Test", lưu LevelID vào PlayerPrefs
     public void OnPlayButtonPressed() {
-        Debug.Log("Chơi level ID: " + currentLevelID);
-        //PlayerPrefs.SetInt("LevelID", currentLevelID);
         PlayLevel();
     }
 
@@ -55,5 +53,10 @@ public class LevelSelectUIManager : MonoBehaviour {
         string sceneName = Const.SCENE_GAMEPLAY;
         PlayerPrefs.SetInt(Const.CURRENT_LEVEL, currentLevelID);
         SceneManager.LoadScene(sceneName);
+    }
+
+    // Viết hàm BackToMainMenu để quay lại scene MainMenu
+    public void BackToMainMenu() {
+        SceneManager.LoadScene(Const.SCENE_MAIN);
     }
 }

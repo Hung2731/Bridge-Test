@@ -21,11 +21,8 @@ public class LevelSelector : MonoBehaviour
         if (levelText != null) {
             levelText.text = levelID.ToString();
             if (levelID > PlayerPrefs.GetInt(Const.PLAYER_MAX_PASSED_LEVEL) + 1) {
-                levelText.color = Color.gray; // Màu xám cho level khóa
+                levelText.color = Color.gray;
             }
-        }
-        else {
-            Debug.LogWarning("LevelSelector: levelText chưa được gán!");
         }
     }
 
@@ -37,10 +34,6 @@ public class LevelSelector : MonoBehaviour
         if (uiManager != null)
         {
             uiManager.ShowLevelInfo(levelID, levelName, previewImage);
-        }
-        else
-        {
-            Debug.LogWarning("LevelSelector: uiManager chưa được gán!");
         }
     }
 }

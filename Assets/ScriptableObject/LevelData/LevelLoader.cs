@@ -47,8 +47,6 @@ public class LevelLoader : MonoBehaviour {
                 levelInstance = Instantiate(data.levelPrefab, levelRoot);
             else
                 levelInstance = Instantiate(data.levelPrefab);
-
-            Debug.Log($" Loaded Level {id} into LevelRoot");
         }
         else {
             Debug.LogWarning($" LevelData {id} KHÔNG CÓ prefab.");
@@ -65,7 +63,6 @@ public class LevelLoader : MonoBehaviour {
 
         LevelData nextLevel = database.GetLevelByID(nextLevelID);
         if (nextLevel == null) {
-            Debug.Log("🎉 Đã hoàn thành tất cả level!");
             return;
         }
         PlayerPrefs.SetInt(Const.CURRENT_LEVEL, nextLevelID);

@@ -30,4 +30,5 @@ public enum SoundEffect
 {
     ButtonClick = 0,
     BuildClick = 1,
+    Victory = 2,
 }

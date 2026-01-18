@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5cfbf16e178df44f9b47463e49fbea2, type: 3}
-  m_Name: Level5
+  m_Name: Level6
   m_EditorClassIdentifier: 
-  levelID: 5
-  budget: 1700
-  levelPrefab: {fileID: 2633616374964511702, guid: c6430a7f174c0864b9160f1a436f212a, type: 3}
+  levelID: 6
+  budget: 2000
+  levelPrefab: {fileID: 2633616374964511702, guid: 611f84403d936f04fbf4ba337e2c6120, type: 3}
   buildPlaneScale: {x: 2, y: 1, z: 1.2}

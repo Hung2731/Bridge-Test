@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Level4
   m_EditorClassIdentifier: 
   levelID: 4
-  budget: 1000
+  budget: 1300
   levelPrefab: {fileID: 7588651730638857648, guid: 364c8209b6cbaa74398a63669529b45a, type: 3}
   buildPlaneScale: {x: 1.5, y: 1, z: 1.2}

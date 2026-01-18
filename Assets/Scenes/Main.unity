@@ -1088,9 +1088,17 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8753260840689282514, guid: 444f050c5127b484ea3233d74c3fff7f, type: 3}
+      propertyPath: m_SfxClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753260840689282514, guid: 444f050c5127b484ea3233d74c3fff7f, type: 3}
       propertyPath: 'm_SfxClips.Array.data[1]'
       value: 
       objectReference: {fileID: 8300000, guid: 5d1e5ce9cf074b649863c6717171b03b, type: 3}
+    - target: {fileID: 8753260840689282514, guid: 444f050c5127b484ea3233d74c3fff7f, type: 3}
+      propertyPath: 'm_SfxClips.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 6008fff83d3213b419059f1a04081da5, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

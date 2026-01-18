@@ -11,7 +11,6 @@ public class GameManager_Test : MonoBehaviour {
         AllPoints.Clear();
         AllBars.Clear();
         Time.timeScale = 0f;
-        //Instantiate(Resources.Load("Level/Level 1"));
     }
 
     [ContextMenu("Pause")]

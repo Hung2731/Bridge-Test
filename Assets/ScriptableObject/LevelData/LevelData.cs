@@ -6,6 +6,4 @@ public class LevelData : ScriptableObject {
     public float budget;
     public GameObject levelPrefab;
     public Vector3 buildPlaneScale;
-
-    // Sau này bạn có thể thêm nhiều thứ nữa:
 }
